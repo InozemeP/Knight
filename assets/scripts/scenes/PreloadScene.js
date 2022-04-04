@@ -4,12 +4,11 @@ class PreloadScene extends Phaser.Scene {
     }
     preload() {
         this.add.sprite(0, 0, 'bg').setOrigin(0);
-        //
-        // this.load.image('pl1', 'assets/sprites/player1.png');
-        // this.load.image('pl2', 'assets/sprites/player2.png');
+        this.load.atlas('knight', 'assets/sprites/knight.png', 'assets/sprites/knight.json');
+        this.load.spritesheet('tiles', 'assets/sprites/fantasy-tiles.png', { frameWidth: 64, frameHeight: 64 });
 
     }
     create() {
-        // this.scene.start('Start');
+        this.scene.start('Game');
     }
 }
